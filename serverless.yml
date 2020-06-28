@@ -5,8 +5,8 @@ provider:
   runtime: go1.x
   region: us-east-1
   stage: ${opt:stage, 'dev'}
-  apiKeys:
-    - ${self:provider.stage}_${self:service}_xApiKey
+  # apiKeys:
+  #   - ${self:provider.stage}_${self:service}_xApiKey
 
 package:
   exclude:
@@ -21,8 +21,8 @@ functions:
       - http:
           path: ping
           method: get
-          private: true
-          cors: true
+          # private: true
+          # cors: true
 
 plugins:
   - serverless-dotenv-plugin
