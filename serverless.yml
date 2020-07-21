@@ -9,6 +9,7 @@ provider:
   #   - ${self:provider.stage}_${self:service}_xApiKey
 
 package:
+  individually: true
   exclude:
     - ./**
   include:
@@ -25,5 +26,4 @@ functions:
           # cors: true
 
 plugins:
-  - serverless-dotenv-plugin
   - serverless-sam
